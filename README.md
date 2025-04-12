@@ -3,7 +3,7 @@
 <img 
   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcS1TeH5BlL94qUIq4er3tnGaf1rZMB3uGy4XQ_fslPCAkAxmSCdKnjDRU3iq7mv-0Cg&usqp=CAU" 
   alt="ClearView Logo"  
-  style="display: block; margin: 0 auto 30px auto; max-width: 180px; height: 100px; border-radius: 10px;"
+  style="display: block; margin: 0 auto 30px auto; max-width: 180px; height: 100px; border-radius: 4rem;"
 />
   <h3>A lightweight, powerful ad-blocking extension for a cleaner browsing experience</h3>
   

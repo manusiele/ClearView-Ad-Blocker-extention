@@ -1,0 +1,19 @@
+.ad, .ads, .adsbygoogle, [id*="google_ads"], [id*="ad-"],
+[class*="ad-container"], [class*="ad-wrapper"], [id*="banner"],
+[class*="banner"], [class*="sponsored"], [id*="sponsored"],
+iframe[src*="ads"], iframe[src*="doubleclick"],
+.sidebar-ads, .side-ad, .video-ads, .preroll-ads,
+.sponsored-content, [data-ad], [class*="adsbox"] {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Remove empty spaces left by blocked ads */
+body .removed-ad {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: hidden !important;
+}

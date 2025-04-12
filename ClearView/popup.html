@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClearView</title>
+  <style>
+    body {
+      width: 280px;
+      padding: 15px;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #e0e0e0;
+      background-color: #1a1a1a;
+      margin: 0;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      color: #ffffff;
+      font-weight: 500;
+    }
+    .container {
+      background-color: #232323;
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .status-label {
+      font-weight: 500;
+      color: #ffffff;
+    }
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 24px;
+    }
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #383838;
+      transition: .3s;
+      border-radius: 24px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: #888888;
+      transition: .3s;
+      border-radius: 50%;
+    }
+    input:checked + .slider {
+      background-color: #006EB9;
+    }
+    input:checked + .slider:before {
+      transform: translateX(24px);
+      background-color: #ffffff;
+    }
+    .stats {
+      background-color: #2a2a2a;
+      border-radius: 6px;
+      padding: 15px;
+      margin-top: 12px;
+      border: 1px solid #333333;
+    }
+    .counter {
+      font-size: 28px;
+      font-weight: bold;
+      color: #0091EA;
+      text-align: center;
+      margin: 8px 0;
+    }
+    .counter-label {
+      text-align: center;
+      font-size: 13px;
+      color: #b0b0b0;
+      margin-bottom: 5px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .info {
+      font-size: 12px;
+      color: #888888;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .current-site {
+      font-size: 13px;
+      font-weight: 500;
+      margin-top: 15px;
+      color: #b0b0b0;
+      background-color: #2a2a2a;
+      padding: 8px 12px;
+      border-radius: 4px;
+      border-left: 3px solid #0091EA;
+    }
+    .divider {
+      height: 1px;
+      background-color: #333333;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/icon48.svg" alt="ClearView Logo" class="logo">
+    <h1>ClearView</h1>
+  </header>
+ 
+  <div class="container">
+    <div class="status-row">
+      <span class="status-label">Ad Blocking</span>
+      <label class="toggle">
+        <input type="checkbox" id="toggleEnabled" checked>
+        <span class="slider"></span>
+      </label>
+    </div>
+   
+    <div class="stats">
+      <div class="counter-label">Ads Blocked</div>
+      <div class="counter" id="totalBlocked">0</div>
+    </div>
+
+    <div class="divider"></div>
+    
+    <div class="current-site" id="currentSite">Current site: example.com</div>
+  </div>
+ 
+  <div class="info">
+    ClearView v1.0 • Professional Ad-Free Browsing
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
